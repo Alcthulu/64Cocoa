@@ -11,6 +11,9 @@
 		1E854F7423A489A8003835BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E854F7323A489A8003835BE /* main.m */; };
 		1E854F7623A489A8003835BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E854F7523A489A8003835BE /* Assets.xcassets */; };
 		1E854F7923A489A8003835BE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E854F7723A489A8003835BE /* MainMenu.xib */; };
+		38859CB823A5E30B00AA2D45 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38859CB723A5E30B00AA2D45 /* Settings.xib */; };
+		38F2863823A6C44A0052BFBB /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2863723A6C44A0052BFBB /* SettingsController.m */; };
+		38F2863B23A6D9BB0052BFBB /* MainMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2863A23A6D9BB0052BFBB /* MainMenuController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,11 @@
 		1E854F7523A489A8003835BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E854F7823A489A8003835BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1E854F7A23A489A8003835BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38859CB723A5E30B00AA2D45 /* Settings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
+		38F2863623A6C44A0052BFBB /* SettingsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		38F2863723A6C44A0052BFBB /* SettingsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
+		38F2863923A6D9BB0052BFBB /* MainMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenuController.h; sourceTree = "<group>"; };
+		38F2863A23A6D9BB0052BFBB /* MainMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainMenuController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +61,12 @@
 		1E854F6E23A489A8003835BE /* 64Cocoa */ = {
 			isa = PBXGroup;
 			children = (
+				38F2863D23A6EC770052BFBB /* Views */,
+				38F2863C23A6EC680052BFBB /* Models */,
+				38F2863223A6B9BA0052BFBB /* Controllers */,
 				1E854F6F23A489A8003835BE /* AppDelegate.h */,
 				1E854F7023A489A8003835BE /* AppDelegate.m */,
 				1E854F7523A489A8003835BE /* Assets.xcassets */,
-				1E854F7723A489A8003835BE /* MainMenu.xib */,
 				1E854F7A23A489A8003835BE /* Info.plist */,
 				1E854F7223A489A8003835BE /* Supporting Files */,
 			);
@@ -69,6 +79,34 @@
 				1E854F7323A489A8003835BE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38F2863223A6B9BA0052BFBB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				38F2863623A6C44A0052BFBB /* SettingsController.h */,
+				38F2863723A6C44A0052BFBB /* SettingsController.m */,
+				38F2863923A6D9BB0052BFBB /* MainMenuController.h */,
+				38F2863A23A6D9BB0052BFBB /* MainMenuController.m */,
+			);
+			name = Controllers;
+			path = 64Cocoa/Controllers;
+			sourceTree = SOURCE_ROOT;
+		};
+		38F2863C23A6EC680052BFBB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		38F2863D23A6EC770052BFBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E854F7723A489A8003835BE /* MainMenu.xib */,
+				38859CB723A5E30B00AA2D45 /* Settings.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,7 +135,7 @@
 		1E854F6423A489A8003835BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = AlvaroRosaARG;
 				TargetAttributes = {
 					1E854F6B23A489A8003835BE = {
@@ -128,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38859CB823A5E30B00AA2D45 /* Settings.xib in Resources */,
 				1E854F7623A489A8003835BE /* Assets.xcassets in Resources */,
 				1E854F7923A489A8003835BE /* MainMenu.xib in Resources */,
 			);
@@ -140,6 +179,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F2863823A6C44A0052BFBB /* SettingsController.m in Sources */,
+				38F2863B23A6D9BB0052BFBB /* MainMenuController.m in Sources */,
 				1E854F7423A489A8003835BE /* main.m in Sources */,
 				1E854F7123A489A8003835BE /* AppDelegate.m in Sources */,
 			);
@@ -168,13 +209,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -212,13 +263,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -283,6 +344,7 @@
 				1E854F7F23A489A8003835BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

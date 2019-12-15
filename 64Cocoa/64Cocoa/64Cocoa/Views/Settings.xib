@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SettingsController">
+            <connections>
+                <outlet property="titleTextField" destination="lj6-Vu-fmc" id="3T5-9F-aY6"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="JXZ-0z-cGB"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="370" height="141"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1754" height="901"/>
+            <view key="contentView" autoresizesSubviews="NO" wantsLayer="YES" appearanceType="aqua" id="EiT-Mj-1SZ" propertyAccessControl="all">
+                <rect key="frame" x="0.0" y="0.0" width="370" height="141"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BA2-Fy-hXf">
+                        <rect key="frame" x="11" y="79" width="150" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Título" drawsBackground="YES" id="n2N-4Y-SK6">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vdY-IA-hL6">
+                        <rect key="frame" x="20" y="27" width="153" height="22"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Tamaño" drawsBackground="YES" id="zGb-sR-aQ7">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KW1-KZ-VGD">
+                        <rect key="frame" x="169" y="79" width="192" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="  Difficulty:" drawsBackground="YES" id="L6X-rO-05o">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sIA-mE-Dv4">
+                        <rect key="frame" x="175" y="82" width="51" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Easy" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="fDJ-JC-wIA">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJD-7u-IkI">
+                        <rect key="frame" x="230" y="82" width="66" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Normal" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="sVg-ZQ-p1r">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mkm-X1-NUd">
+                        <rect key="frame" x="300" y="82" width="52" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Hard" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ObH-YQ-bhm">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hky-9z-VCu">
+                        <rect key="frame" x="73" y="28" width="96" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="f3B-oM-2On"/>
+                    </slider>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lj6-Vu-fmc">
+                        <rect key="frame" x="55" y="90" width="96" height="22"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="ISO-nh-gRB">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="215" y="92.5"/>
+        </window>
+    </objects>
+</document>
