@@ -37,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
     IBOutlet NSTextField * Lose;
     IBOutlet NSButton * PlayButton;
     
+    IBOutlet NSWindow * window;
+    
     
         
     

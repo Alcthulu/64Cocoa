@@ -39,15 +39,19 @@
                            selector:@selector(handleNuevoObjetivo:)
                            name:sendNewDifficulty
                            object:nil];
+    [notificationCenter addObserver:self
+                           selector:@selector(handleNuevoTitulo:)
+                               name:sendNewTitle
+                             object:nil];
     
     
     return self;
 }
 
 extern NSString * sendNewDifficulty;
+extern NSString * sendNewTitle;
 
 -(void) handleNuevoObjetivo:(NSNotification *)aNotification{
-    NSRect parameters;
     NSDictionary * aDictionary = nil;
     NSString * dificultad;
     
@@ -66,6 +70,19 @@ extern NSString * sendNewDifficulty;
     }
 
 }
+
+-(void) handleNuevoTitulo:(NSNotification *)aNotification{
+    NSDictionary * aDictionary = nil;
+    NSString * titulo;
+    
+    aDictionary = [aNotification userInfo];
+    titulo = [aDictionary objectForKey:@"titulo"];
+    
+    [window setTitle:titulo];
+    
+}
+
+
 
 -(IBAction)showSettings:(id)sender{
     [settingsController showWindow:self];

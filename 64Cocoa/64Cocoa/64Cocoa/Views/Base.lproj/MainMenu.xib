@@ -956,6 +956,7 @@
                 <outlet property="Objetivo" destination="hzw-48-pPN" id="TJ9-WW-XqS"/>
                 <outlet property="PlayButton" destination="u2m-P4-u5l" id="Nhd-Fl-duc"/>
                 <outlet property="Win" destination="E6z-D0-Hyf" id="3VY-iW-dpJ"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="6vb-4c-CzJ"/>
             </connections>
         </customObject>
     </objects>

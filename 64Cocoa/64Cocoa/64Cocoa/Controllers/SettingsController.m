@@ -21,6 +21,7 @@
 }
 
 NSString * sendNewDifficulty = @"sendNewDifficulty";
+NSString * sendNewTitle = @"sendNewTitle";
 
 -(IBAction)Easy:(id)sender{
     NSString* dificultad = nil;
@@ -68,11 +69,18 @@ NSString * sendNewDifficulty = @"sendNewDifficulty";
 }
 
 -(IBAction)Title:(id)sender{
+    NSString* titulo = nil;
+    NSDictionary * notificationInfo = nil;
+    NSNotificationCenter * notificationCenter = [NSNotificationCenter defaultCenter];
     
+    titulo = [titleTextField stringValue];
+    
+    notificationInfo = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:titulo,nil]
+                                                   forKeys:[NSArray arrayWithObjects:@"titulo",nil]];
+    [notificationCenter postNotificationName:sendNewTitle
+                                      object:nil
+                                    userInfo:notificationInfo];
 }
 
--(IBAction)Size:(id)sender{
-    
-}
 
 @end
