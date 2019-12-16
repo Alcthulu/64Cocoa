@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
     IBOutlet NSButton * Easy;
     IBOutlet NSButton * Normal;
     IBOutlet NSButton * Hard;
-    IBOutlet NSSlider * Size;
+
 }
 
 @end
