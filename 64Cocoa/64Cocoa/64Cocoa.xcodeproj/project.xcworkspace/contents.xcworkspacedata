@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:64Cocoa.xcodeproj">
+      location = "group:/Users/alvaro/Documents/GitHub/64Cocoa/64Cocoa/64Cocoa/64Cocoa/Images/fD.png">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

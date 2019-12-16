@@ -22,6 +22,7 @@
         }
     }
     
+    objetivo = 64;
     return self;
 }
 
