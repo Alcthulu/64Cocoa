@@ -10,10 +10,14 @@
 #import "MainMenuController.h"
 #import "SettingsController.h"
 
+@interface MainMenuController(){
+    SettingsController * settingsController;}
+@end
+
 @implementation MainMenuController{
-    SettingsController * settingsController;
     Boolean jugando;
 }
+
 
 -(id) init {
     self = [super init];
@@ -21,6 +25,7 @@
     if(nil == self)
         return nil;
     
+    settingsController = [[SettingsController alloc] init];
     
     if(nil == juego){
         juego = [[Juego alloc] init];
@@ -29,12 +34,40 @@
 
     jugando = false;
     
+    NSNotificationCenter * notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self
+                           selector:@selector(handleNuevoObjetivo:)
+                           name:sendNewDifficulty
+                           object:nil];
+    
+    
     return self;
 }
 
+extern NSString * sendNewDifficulty;
+
+-(void) handleNuevoObjetivo:(NSNotification *)aNotification{
+    NSRect parameters;
+    NSDictionary * aDictionary = nil;
+    NSString * dificultad;
+    
+    aDictionary = [aNotification userInfo];
+    dificultad = [aDictionary objectForKey:@"dificultad"];
+    
+    if([dificultad isEqualToString:@"Easy"]){
+        [juego setObjetivo:64];
+        [Objetivo setStringValue:[NSString stringWithFormat:@"%d", [juego getObjetivo]]];
+    }else  if([dificultad isEqualToString:@"Normal"]){
+        [juego setObjetivo:2048];
+        [Objetivo setStringValue:[NSString stringWithFormat:@"%d", [juego getObjetivo]]];
+    }else  if([dificultad isEqualToString:@"Hard"]){
+        [juego setObjetivo:4096];
+        [Objetivo setStringValue:[NSString stringWithFormat:@"%d", [juego getObjetivo]]];
+    }
+
+}
+
 -(IBAction)showSettings:(id)sender{
-    if(nil == settingsController)
-        settingsController = [[SettingsController alloc] init];
     [settingsController showWindow:self];
 }
 

@@ -13,7 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SettingsController : NSWindowController{
     
     IBOutlet NSTextField * titleTextField;
-    
+    IBOutlet NSButton * Easy;
+    IBOutlet NSButton * Normal;
+    IBOutlet NSButton * Hard;
+    IBOutlet NSSlider * Size;
 }
 
 @end
