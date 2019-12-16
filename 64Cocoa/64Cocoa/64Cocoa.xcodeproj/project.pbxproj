@@ -14,6 +14,7 @@
 		38859CB823A5E30B00AA2D45 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38859CB723A5E30B00AA2D45 /* Settings.xib */; };
 		38F2863823A6C44A0052BFBB /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2863723A6C44A0052BFBB /* SettingsController.m */; };
 		38F2863B23A6D9BB0052BFBB /* MainMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2863A23A6D9BB0052BFBB /* MainMenuController.m */; };
+		38F2864023A6F0A50052BFBB /* Juego.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2863F23A6F0A50052BFBB /* Juego.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		38F2863723A6C44A0052BFBB /* SettingsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
 		38F2863923A6D9BB0052BFBB /* MainMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenuController.h; sourceTree = "<group>"; };
 		38F2863A23A6D9BB0052BFBB /* MainMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainMenuController.m; sourceTree = "<group>"; };
+		38F2863E23A6F0A50052BFBB /* Juego.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Juego.h; sourceTree = "<group>"; };
+		38F2863F23A6F0A50052BFBB /* Juego.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Juego.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 		38F2863C23A6EC680052BFBB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				38F2863E23A6F0A50052BFBB /* Juego.h */,
+				38F2863F23A6F0A50052BFBB /* Juego.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F2864023A6F0A50052BFBB /* Juego.m in Sources */,
 				38F2863823A6C44A0052BFBB /* SettingsController.m in Sources */,
 				38F2863B23A6D9BB0052BFBB /* MainMenuController.m in Sources */,
 				1E854F7423A489A8003835BE /* main.m in Sources */,

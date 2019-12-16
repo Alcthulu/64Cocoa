@@ -804,14 +804,17 @@
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textFieldCell>
                     </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lqk-3W-trm">
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqk-3W-trm">
                         <rect key="frame" x="20" y="324" width="104" height="100"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" borderStyle="bezel" alignment="center" title="5" drawsBackground="YES" id="wZb-E7-g1t">
+                        <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="center" title="5" drawsBackground="YES" id="wZb-E7-g1t">
                             <font key="font" metaFont="system" size="75"/>
                             <color key="textColor" red="0.0" green="0.13866856559999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="etb-nD-LaO" id="NRR-9d-Lcf"/>
+                        </connections>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OBN-ns-9oU">
                         <rect key="frame" x="125" y="324" width="104" height="100"/>
@@ -862,6 +865,27 @@
             </view>
             <point key="canvasLocation" x="126" y="-58"/>
         </window>
-        <customObject id="etb-nD-LaO" customClass="MainMenuController"/>
+        <customObject id="etb-nD-LaO" customClass="MainMenuController">
+            <connections>
+                <outlet property="Label0x0" destination="Lqk-3W-trm" id="Sb6-M4-9eN"/>
+                <outlet property="Label0x1" destination="OBN-ns-9oU" id="cAP-cs-236"/>
+                <outlet property="Label0x2" destination="Y0j-ti-dRC" id="dBX-nj-OEf"/>
+                <outlet property="Label0x3" destination="BBb-rs-IGB" id="Cbp-kL-up7"/>
+                <outlet property="Label1x0" destination="cxe-HE-kTN" id="0hS-Tn-eFT"/>
+                <outlet property="Label1x1" destination="Bag-rd-3SI" id="4kV-Uc-Eak"/>
+                <outlet property="Label1x2" destination="bF4-NT-CyF" id="Pbu-83-csq"/>
+                <outlet property="Label1x3" destination="eP8-hG-ubX" id="Eix-hd-t1Q"/>
+                <outlet property="Label2x0" destination="5gw-xz-qxA" id="a2P-8q-2U2"/>
+                <outlet property="Label2x1" destination="QiG-V2-tPe" id="NhA-Dk-90e"/>
+                <outlet property="Label2x2" destination="SiT-Jl-0HN" id="kLL-i3-omf"/>
+                <outlet property="Label2x3" destination="aAc-aq-KXe" id="5X4-hm-qBa"/>
+                <outlet property="Label3x0" destination="7BC-gQ-wIt" id="Kzb-cn-8mP"/>
+                <outlet property="Label3x1" destination="3Kx-CK-W2o" id="uMh-Bg-8SG"/>
+                <outlet property="Label3x2" destination="3HU-BP-nZ2" id="jiV-QJ-MYt"/>
+                <outlet property="Label3x3" destination="72p-Oj-Lez" id="Wad-xi-6h2"/>
+                <outlet property="juego" destination="WIo-cw-87C" id="c0r-Gy-vo0"/>
+            </connections>
+        </customObject>
+        <customObject id="WIo-cw-87C" customClass="Juego"/>
     </objects>
 </document>
