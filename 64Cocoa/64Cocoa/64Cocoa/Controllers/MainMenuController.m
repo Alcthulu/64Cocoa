@@ -15,7 +15,7 @@
 @end
 
 @implementation MainMenuController{
-    Boolean jugando;
+    Boolean jugando, w, l;
 }
 
 
@@ -35,6 +35,8 @@
     
 
     jugando = false;
+    w = false;
+    l = false;
     
     NSNotificationCenter * notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self
@@ -119,7 +121,7 @@ extern NSString * sendNewTitle;
 }
 
 -(IBAction)playAction:(id)sender{
-    if(!jugando){
+    if(!jugando && !w && !l){
         jugando = true;
         [self nuevoNumero];
         [PlayButton setTitle:@"Restart"];
@@ -136,6 +138,8 @@ extern NSString * sendNewTitle;
     }else{
         [self reset];
         jugando = false;
+        w = false;
+        l = false;
     }
 }
 
@@ -346,6 +350,7 @@ extern NSString * sendNewTitle;
     [PlayButton setTitle:@"Play"];
     [Win setStringValue:@""];
     [Lose setStringValue:@""];
+    [self enviarEstadoParaTabla];
 }
 
 -(void) nuevoNumero{
@@ -439,11 +444,13 @@ extern NSString * sendNewTitle;
 
 -(void) win{
     jugando = false;
+    w = true;
     [Win setStringValue:@"YOU WIN"];
 }
 
 -(void) lose{
     jugando = false;
+    l = true;
     [Lose setStringValue:@"YOU LOSE"];
 }
 

@@ -149,24 +149,4 @@ extern NSString * updateTable;
     return nil ;
 }
 
-
-/*
- 
- 
- 
- 
- ---------------------AQUI CREAR UN HANDLER QUE RECIBA LA NOTIFICACION CON EL OBJETO DEL TIPO DE --------------------------------
- ---------------------DATO CREADO PARA RELlENAR LAS FILAS DE LA TABLA. CON ESTE OBJETO CREAREMOS --------------------------------
- ---------------------LAS CELDAS PARA LA TABLA Y LAS AÑADIREMOS EN CASO DE NO EXISTIR UNA FILA   --------------------------------
- ---------------------CON EL IDENTIFICADOR REFERENTE A ESTA CASILLA. DESDE EL PRINCIPIO SE       --------------------------------
- ---------------------PASARAN TODAS LAS CASILLAS Y SE CREARAN TODAS LAS CASILLAS CON LO CUAL LO  --------------------------------
- ---------------------UNICO QUE HABRÁ QUE HACER SERÁ ACTUALIZARLAS                               --------------------------------
- ---------------------OTRA OPCIÓN ES CADA VEZ QUE LLEGUE UNA NOTIFICACIÓN ELIMINAR TODAS LAS     --------------------------------
- ---------------------CELDAS DE LA TABLA Y AÑADIR LAS CELDAS CORRESPONDIENTES DE LAS CASILLAS QUE--------------------------------
- ---------------------CONTENGAN UN VALOR DISTINTO A CERO                                         --------------------------------
- 
- 
- 
- */
-
 @end
