@@ -65,7 +65,11 @@ extern NSString * sendNewTitle;
     
     for (int i=0; i<4; i++){
         for (int j=0; j<4; j++){
-            tablero [i+(j*4)] = [NSString stringWithFormat:@"%d",[juego getCasilla:i col:j]];
+            if([juego getCasilla:i col:j] <= 0){
+                tablero [j+(i*4)] = @"";
+            }else{
+                tablero [j+(i*4)] = [NSString stringWithFormat:@"%d",[juego getCasilla:i col:j]];
+            }
         }
     }
     

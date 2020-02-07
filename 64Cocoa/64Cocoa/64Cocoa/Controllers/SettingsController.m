@@ -24,6 +24,24 @@
                                name:updateTable
                              object:nil];
     
+    casillasTabla[0] = @"0x0";
+    casillasTabla[1] = @"0x1";
+    casillasTabla[2] = @"0x2";
+    casillasTabla[3] = @"0x3";
+    casillasTabla[4] = @"1x0";
+    casillasTabla[5] = @"1x1";
+    casillasTabla[6] = @"1x2";
+    casillasTabla[7] = @"1x3";
+    casillasTabla[8] = @"2x0";
+    casillasTabla[9] = @"2x1";
+    casillasTabla[10] = @"2x2";
+    casillasTabla[11] = @"2x3";
+    casillasTabla[12] = @"3x0";
+    casillasTabla[13] = @"3x1";
+    casillasTabla[14] = @"3x2";
+    casillasTabla[15] = @"3x3";
+    
+    [Tabla reloadData];
     
     
     return self;
@@ -94,33 +112,18 @@ extern NSString * updateTable;
                                       object:nil
                                     userInfo:notificationInfo];
     
-    casillasTabla[0] = @"0x0";
-    casillasTabla[1] = @"0x1";
-    casillasTabla[2] = @"0x2";
-    casillasTabla[3] = @"0x3";
-    casillasTabla[4] = @"1x0";
-    casillasTabla[5] = @"1x1";
-    casillasTabla[6] = @"1x2";
-    casillasTabla[7] = @"1x3";
-    casillasTabla[8] = @"2x0";
-    casillasTabla[9] = @"2x1";
-    casillasTabla[10] = @"2x2";
-    casillasTabla[11] = @"2x3";
-    casillasTabla[12] = @"3x0";
-    casillasTabla[13] = @"3x1";
-    casillasTabla[14] = @"3x2";
-    casillasTabla[15] = @"3x3";
     
-    [Tabla reloadData];
 }
 
 
 
 -(void) handleTabla:(NSNotification *)aNotification{
     NSDictionary * aDictionary = nil;
-    
-    
     aDictionary = [aNotification userInfo];
+    
+    for (int i=0; i<16; i++){
+         valoresTabla[i] = [aDictionary objectForKey:[NSString stringWithFormat:@"%d", i]];
+    }
     [Tabla reloadData];
     
 }
@@ -138,7 +141,7 @@ extern NSString * updateTable;
         
     }
     if([column  isEqualToString:@"Valor"]){
-        NSString * Valor = casillasTabla[row];
+        NSString * Valor = valoresTabla[row];
         return Valor;
         
     }
