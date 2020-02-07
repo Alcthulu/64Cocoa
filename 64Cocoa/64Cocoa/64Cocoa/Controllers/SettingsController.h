@@ -16,6 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
     IBOutlet NSButton * Easy;
     IBOutlet NSButton * Normal;
     IBOutlet NSButton * Hard;
+    IBOutlet NSTableView * Tabla;
+    
+    
+    NSString * valoresTabla[16];
+    NSString * casillasTabla[16];
+    
 
 }
 

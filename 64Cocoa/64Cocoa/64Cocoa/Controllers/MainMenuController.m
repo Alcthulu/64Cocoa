@@ -26,6 +26,8 @@
         return nil;
     
     settingsController = [[SettingsController alloc] init];
+    //[settingsController showWindow:self];
+
     
     if(nil == juego){
         juego = [[Juego alloc] init];
@@ -48,8 +50,32 @@
     return self;
 }
 
+NSString * updateTable = @"updateTable";
+
 extern NSString * sendNewDifficulty;
 extern NSString * sendNewTitle;
+
+
+//metodo para enviar las notificaciones de actualización de la tabla
+-(void)enviarEstadoParaTabla{
+    
+    NSString* tablero[16];
+    NSDictionary * notificationInfo = nil;
+    NSNotificationCenter * notificationCenter = [NSNotificationCenter defaultCenter];
+    
+    for (int i=0; i<4; i++){
+        for (int j=0; j<4; j++){
+            tablero [i+(j*4)] = [NSString stringWithFormat:@"%d",[juego getCasilla:i col:j]];
+        }
+    }
+    
+    
+    notificationInfo = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:tablero[0],tablero[1],tablero[2],tablero[3],tablero[4],tablero[5], tablero[6],tablero[7],tablero[8],tablero[9],tablero[10],tablero[11],tablero[12],tablero[13],tablero[14],tablero[15],nil]
+                                                   forKeys:[NSArray arrayWithObjects:@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",nil]];
+    [notificationCenter postNotificationName:updateTable
+                                      object:nil
+                                    userInfo:notificationInfo];
+}
 
 -(void) handleNuevoObjetivo:(NSNotification *)aNotification{
     NSDictionary * aDictionary = nil;
@@ -94,6 +120,15 @@ extern NSString * sendNewTitle;
         [self nuevoNumero];
         [PlayButton setTitle:@"Restart"];
         [Objetivo setStringValue:[NSString stringWithFormat:@"%d", [juego getObjetivo]]];
+        /*
+         
+         
+         ENVIAR NOTIFICACION----------------------------------------------
+         
+         
+         
+         */
+        [self enviarEstadoParaTabla];
     }else{
         [self reset];
         jugando = false;
@@ -133,6 +168,16 @@ extern NSString * sendNewTitle;
         }else if([self isFull]){
             [self lose];
         }
+        /*
+         
+         
+         ENVIAR NOTIFICACION----------------------------------------------
+         
+         
+         
+         */
+        [self enviarEstadoParaTabla];
+
     }
 }
 
@@ -169,6 +214,16 @@ extern NSString * sendNewTitle;
         }else if([self isFull]){
             [self lose];
         }
+        /*
+         
+         
+         ENVIAR NOTIFICACION----------------------------------------------
+         
+         
+         
+         */
+        [self enviarEstadoParaTabla];
+
     }
 }
 
@@ -205,6 +260,16 @@ extern NSString * sendNewTitle;
         }else if([self isFull]){
             [self lose];
         }
+        /*
+         
+         
+         ENVIAR NOTIFICACION----------------------------------------------
+         
+         
+         
+         */
+        [self enviarEstadoParaTabla];
+
     }
 }
 
@@ -241,6 +306,16 @@ extern NSString * sendNewTitle;
         }else if([self isFull]){
             [self lose];
         }
+        /*
+         
+         
+         ENVIAR NOTIFICACION----------------------------------------------
+         
+         
+         
+         */
+        [self enviarEstadoParaTabla];
+
     }
 }
 
